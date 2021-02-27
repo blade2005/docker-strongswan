@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  strongswan:
+    container_name: strongswan
+    image: blade2005/strongswan
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - "./config/strongswan.conf:/etc/strongswan.conf"
+      - "./config/ipsec.conf:/etc/ipsec.conf"
+      - "./config/ipsec.secrets:/etc/ipsec.secrets"
+      - "./config/ipsec.d:/etc/ipsec.d"
+
