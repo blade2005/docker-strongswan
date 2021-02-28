@@ -23,5 +23,5 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FILTER_REGEX_INCLUDE: generate_certs.sh
+          FILTER_REGEX_INCLUDE: *.sh
 
